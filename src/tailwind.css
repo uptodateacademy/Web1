@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  @apply p-5 bg-white rounded shadow-md my-5 mx-auto;
+}
+
+.head-container {
+  @apply border-l-4 border-red-600 p-3 bg-gray-300 uppercase font-semibold tracking-wider;
+}

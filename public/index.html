@@ -1,0 +1,1247 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="index.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free WorldWide News</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body class="bg-gray-200">
+    <section>
+      <header class="p-4 bg-white">
+        <nav class="md:flex md:justify-around md:items-center">
+          <div class="flex justify-between items-center">
+            <a href="#"><img src="img/logo.webp" alt="logo" /></a>
+            <div class="md:hidden">
+              <svg
+                id="bar"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="w-5 h-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M2 4.75A.75.75 0 0 1 2.75 4h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 4.75ZM2 10a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 10Zm0 5.25a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="my-5 md:my-0 hidden md:block" id="a-links">
+            <ul class="list-none md:inline-flex md:gap-5 inline-grid gap-2">
+              <li>
+                <a
+                  class="text-gray-600 uppercase text-xs hover:text-gray-900 transition ease-in duration-150 hover:font-bold"
+                  href="#"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-gray-600 uppercase text-xs hover:text-gray-900 transition ease-in duration-150 hover:font-bold"
+                  href="#"
+                  >Archive</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-gray-600 uppercase text-xs hover:text-gray-900 transition ease-in duration-150 hover:font-bold"
+                  href="#"
+                  >pages</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-gray-600 uppercase text-xs hover:text-gray-900 transition ease-in duration-150 hover:font-bold"
+                  href="#"
+                  >mega</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-gray-600 uppercase text-xs hover:text-gray-900 transition ease-in duration-150 hover:font-bold"
+                  href="#"
+                  >about</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-gray-600 uppercase text-xs hover:text-gray-900 transition ease-in duration-150 hover:font-bold"
+                  href="#"
+                  >contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="md:block hidden" id="x-header">
+            <div>
+              <input
+                class="px-2 py-1 border outline-none border-gray-300 rounded w-full"
+                type="search"
+                placeholder="Search your latest news here"
+              />
+            </div>
+          </div>
+        </nav>
+      </header>
+    </section>
+
+    <section>
+      <div class="w-full h-96 relative object-cover object-center">
+        <div class="absolute w-full h-full bg-gray-900 z-10 opacity-50"></div>
+        <img class="w-full h-full" src="img/bg5.webp" alt="background" id="bgImage" />
+        <div
+          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12 lg:w-1/2 z-10 grid gap-4"
+        >
+          <div class="grid lg:grid-cols-3 gap-4">
+            <div class="relative lg:col-span-2">
+              <input
+                class="px-10 py-4 bg-transparent w-full border border-gray-50 rounded-full outline-none text-white text-sm capitalize placeholder:text-white"
+                type="search"
+                placeholder="Type a word and hit enter" id="postSearch"
+              />
+
+              <svg
+                class="absolute top-1/2 left-3 w-5 transform -translate-y-1/2 text-white"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="w-5 h-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+
+            <div class="relative">
+              <input
+                class="rounded shadow outline-none px-3 py-4 font-semibold text-sm uppercase w-full"
+                list="dataCountry"
+                placeholder="Us" id="postCountry"
+              />
+              <datalist id="dataCountry"> </datalist>
+            </div>
+          </div>
+          <div class="">
+            <button
+              class="block bg-red-600 py-4 px-4 text-white font-semibold my-0 mx-auto rounded w-full" id="postBtn"
+            >
+              Search News
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="grid lg:grid-cols-4 m-3 lg:m-10 gap-5">
+        <div class="">
+          <div class="container hidden lg:block">
+            <div class="head-container">
+              <p>most popular</p>
+            </div>
+            <div class="my-10" id="mostPopularContainer">
+              <div class="flex gap-3 mb-8" id="mostPopular">
+                <div class="-mt-1" id="mostPopularTitle">
+                  <div
+                    class="mt-2 flex gap-3 flex-wrap"
+                    id="mostPopularEngagement"
+                  >
+                    <div class="flex space-x-1">
+                      <svg
+                        class="w-4"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+                        />
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                        />
+                      </svg>
+                      <span class="text-sm">35</span>
+                    </div>
+                    <div class="flex space-x-1">
+                      <svg
+                        class="w-4"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z"
+                        />
+                      </svg>
+                      <span class="text-sm">24</span>
+                    </div>
+                    <div class="flex space-x-1">
+                      <svg
+                        class="w-4"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"
+                        />
+                      </svg>
+                      <span class="text-sm">14</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex gap-3 mb-8" id="mostPopular">
+                <div class="-mt-1" id="mostPopularTitle">
+                  <div
+                    class="mt-2 flex gap-3 flex-wrap"
+                    id="mostPopularEngagement"
+                  >
+                    <div class="flex space-x-1">
+                      <svg
+                        class="w-4"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+                        />
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                        />
+                      </svg>
+                      <span class="text-sm">35</span>
+                    </div>
+                    <div class="flex space-x-1">
+                      <svg
+                        class="w-4"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z"
+                        />
+                      </svg>
+                      <span class="text-sm">24</span>
+                    </div>
+                    <div class="flex space-x-1">
+                      <svg
+                        class="w-4"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"
+                        />
+                      </svg>
+                      <span class="text-sm">14</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex gap-3 mb-8" id="mostPopular">
+                <div class="-mt-1" id="mostPopularTitle">
+                  <div
+                    class="mt-2 flex gap-3 flex-wrap"
+                    id="mostPopularEngagement"
+                  >
+                    <div class="flex space-x-1">
+                      <svg
+                        class="w-4"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+                        />
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                        />
+                      </svg>
+                      <span class="text-sm">35</span>
+                    </div>
+                    <div class="flex space-x-1">
+                      <svg
+                        class="w-4"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z"
+                        />
+                      </svg>
+                      <span class="text-sm">24</span>
+                    </div>
+                    <div class="flex space-x-1">
+                      <svg
+                        class="w-4"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"
+                        />
+                      </svg>
+                      <span class="text-sm">14</span>
+                    </div><!--Stop Here-->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="my-16 relative lg:h-96">
+              <div class="absolute w-full h-full bg-gray-900 opacity-60"></div>
+              <img
+                class="rounded w-full h-full object-cover object-center"
+                src="img/hmagazine.jpg"
+                alt="magazine landscape"
+              />
+              <div
+                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center w-full"
+              >
+                <h4 class="text-2xl text-white font-semibold">
+                  Magazine Theme
+                </h4>
+                <span class="block text-gray-300 mb-5 uppercase text-xs mt-1"
+                  >ad sizes 300 x 350</span
+                >
+                <a
+                  href=""
+                  class="py-2 px-5 bg-red-600 text-white uppercase cursor-pointer rounded text-sm"
+                >
+                  Purchase Now
+                </a>
+              </div>
+            </div>
+            <div>
+              <div class="head-container">
+                <p>sports news</p>
+              </div>
+              <div class="my-10" id="sportsNewsContainer">
+                <div class="flex gap-3 mb-8" id="sportsNews">
+                  <div class="-mt-1" id="innerSportsNews">
+                    <div class="mt-2 flex gap-3 flex-wrap" id="sportsEngagement">
+                      <div class="flex space-x-1">
+                        <svg
+                          class="w-4"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          class="w-6 h-6"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+                          />
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                          />
+                        </svg>
+                        <span class="text-sm">35</span>
+                      </div>
+                      <div class="flex space-x-1">
+                        <svg
+                          class="w-4"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          class="w-6 h-6"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z"
+                          />
+                        </svg>
+                        <span class="text-sm">24</span>
+                      </div>
+                      <div class="flex space-x-1">
+                        <svg
+                          class="w-4"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          class="w-6 h-6"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"
+                          />
+                        </svg>
+                        <span class="text-sm">14</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex gap-3 mb-8" id="sportsNews">
+                  <div class="-mt-1" id="innerSportsNews">
+                    <div class="mt-2 flex gap-3 flex-wrap" id="sportsEngagement">
+                      <div class="flex space-x-1">
+                        <svg
+                          class="w-4"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          class="w-6 h-6"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+                          />
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                          />
+                        </svg>
+                        <span class="text-sm">35</span>
+                      </div>
+                      <div class="flex space-x-1">
+                        <svg
+                          class="w-4"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          class="w-6 h-6"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z"
+                          />
+                        </svg>
+                        <span class="text-sm">24</span>
+                      </div>
+                      <div class="flex space-x-1">
+                        <svg
+                          class="w-4"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          class="w-6 h-6"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"
+                          />
+                        </svg>
+                        <span class="text-sm">14</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex gap-3 mb-8" id="sportsNews">
+                  <div class="-mt-1" id="innerSportsNews">
+                    <div class="mt-2 flex gap-3 flex-wrap" id="sportsEngagement">
+                      <div class="flex space-x-1">
+                        <svg
+                          class="w-4"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          class="w-6 h-6"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+                          />
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                          />
+                        </svg>
+                        <span class="text-sm">35</span>
+                      </div>
+                      <div class="flex space-x-1">
+                        <svg
+                          class="w-4"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          class="w-6 h-6"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z"
+                          />
+                        </svg>
+                        <span class="text-sm">24</span>
+                      </div>
+                      <div class="flex space-x-1">
+                        <svg
+                          class="w-4"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          class="w-6 h-6"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"
+                          />
+                        </svg>
+                        <span class="text-sm">14</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-2">
+          <div class="container">
+            <div class="head-container">
+              <p>trending now</p>
+            </div>
+            <div class="p-2" id="outerPostBody">
+              <div class="" id="innerPostBody"></div>
+            </div>
+            <!-- <button
+              class="my-0 mx-auto bg-red-600 text-white rounded block py-1 px-5"
+              id="loadMore"
+            >
+              Load More
+            </button> -->
+          </div>
+        </div>
+        <div>
+          <div class="container">
+            <div class="mb-14">
+              <div class="bg-facebook mb-3 text-white p-3 text-center rounded">
+                <a href="">
+                  <i class="fa-brands fa-facebook mr-2"></i>
+                  <span class="font-semibold capitalize">4,360 views</span>
+                </a>
+              </div>
+              <div class="bg-twitter mb-3 text-white p-3 text-center rounded">
+                <a href="#">
+                  <i class="fa-brands fa-x-twitter mr-2"></i>
+                  <span class="font-semibold capitalize">3,380 followers</span>
+                </a>
+              </div>
+              <div class="bg-reddit mb-3 text-white p-3 text-center rounded">
+                <a href="">
+                  <i class="fa-brands fa-reddit-alien mr-2"></i>
+                  <span class="font-semibold capitalize">5,510 followers</span>
+                </a>
+              </div>
+              <div class="bg-youtube mb-3 text-white p-3 text-center rounded">
+                <a href="">
+                  <i class="fa-brands fa-youtube mr-2"></i>
+                  <span class="font-semibold capitalize"
+                    >4,330 subscribers</span
+                  >
+                </a>
+              </div>
+            </div>
+            <div>
+              <div class="head-container">
+                <p>categories</p>
+              </div>
+              <div>
+                <div class="flex justify-between items-center my-5">
+                  <div class="flex space-x-1 items-center text-gray-700">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 16 16"
+                      fill="currentColor"
+                      class="w-4 h-4"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M12.78 7.595a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06l2.72-2.72-2.72-2.72a.75.75 0 0 1 1.06-1.06l3.25 3.25Zm-8.25-3.25 3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06l2.72-2.72-2.72-2.72a.75.75 0 0 1 1.06-1.06Z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <a href="" class="text-gray-700">Life Style</a>
+                  </div>
+                  <div>
+                    <span class="text-gray-700">35</span>
+                  </div>
+                </div>
+                <div class="flex justify-between items-center my-5">
+                  <div class="flex space-x-1 items-center text-gray-700">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 16 16"
+                      fill="currentColor"
+                      class="w-4 h-4"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M12.78 7.595a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06l2.72-2.72-2.72-2.72a.75.75 0 0 1 1.06-1.06l3.25 3.25Zm-8.25-3.25 3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06l2.72-2.72-2.72-2.72a.75.75 0 0 1 1.06-1.06Z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <a href="" class="text-gray-700">Travel</a>
+                  </div>
+                  <div>
+                    <span class="text-gray-700">30</span>
+                  </div>
+                </div>
+                <div class="flex justify-between items-center my-5">
+                  <div class="flex space-x-1 items-center text-gray-700">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 16 16"
+                      fill="currentColor"
+                      class="w-4 h-4"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M12.78 7.595a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06l2.72-2.72-2.72-2.72a.75.75 0 0 1 1.06-1.06l3.25 3.25Zm-8.25-3.25 3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06l2.72-2.72-2.72-2.72a.75.75 0 0 1 1.06-1.06Z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <a href="" class="text-gray-700">Foods</a>
+                  </div>
+                  <div>
+                    <span class="text-gray-700">13</span>
+                  </div>
+                </div>
+                <div class="flex justify-between items-center my-5">
+                  <div class="flex space-x-1 items-center text-gray-700">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 16 16"
+                      fill="currentColor"
+                      class="w-4 h-4"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M12.78 7.595a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06l2.72-2.72-2.72-2.72a.75.75 0 0 1 1.06-1.06l3.25 3.25Zm-8.25-3.25 3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06l2.72-2.72-2.72-2.72a.75.75 0 0 1 1.06-1.06Z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <a href="" class="text-gray-700">Game</a>
+                  </div>
+                  <div>
+                    <span class="text-gray-700">06</span>
+                  </div>
+                </div>
+                <div class="flex justify-between items-center my-5">
+                  <div class="flex space-x-1 items-center text-gray-700">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 16 16"
+                      fill="currentColor"
+                      class="w-4 h-4"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M12.78 7.595a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06l2.72-2.72-2.72-2.72a.75.75 0 0 1 1.06-1.06l3.25 3.25Zm-8.25-3.25 3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06l2.72-2.72-2.72-2.72a.75.75 0 0 1 1.06-1.06Z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <a href="" class="text-gray-700">Sports</a>
+                  </div>
+                  <div>
+                    <span class="text-gray-700">28</span>
+                  </div>
+                </div>
+                <div class="flex justify-between items-center my-5">
+                  <div class="flex space-x-1 items-center text-gray-700">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 16 16"
+                      fill="currentColor"
+                      class="w-4 h-4"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M12.78 7.595a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06l2.72-2.72-2.72-2.72a.75.75 0 0 1 1.06-1.06l3.25 3.25Zm-8.25-3.25 3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06l2.72-2.72-2.72-2.72a.75.75 0 0 1 1.06-1.06Z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <a href="" class="text-gray-700">Football</a>
+                  </div>
+                  <div>
+                    <span class="text-gray-700">08</span>
+                  </div>
+                </div>
+                <div class="flex justify-between items-center my-5">
+                  <div class="flex space-x-1 items-center text-gray-700">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 16 16"
+                      fill="currentColor"
+                      class="w-4 h-4"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M12.78 7.595a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06l2.72-2.72-2.72-2.72a.75.75 0 0 1 1.06-1.06l3.25 3.25Zm-8.25-3.25 3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06l2.72-2.72-2.72-2.72a.75.75 0 0 1 1.06-1.06Z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <a href="" class="text-gray-700">TV Show</a>
+                  </div>
+                  <div>
+                    <span class="text-gray-700">13</span>
+                  </div>
+                </div>
+              </div>
+              <div class="my-10 relative">
+                <div
+                  class="absolute w-full h-full bg-gray-900 opacity-75 z-10"
+                ></div>
+                <img
+                  class="rounded w-full"
+                  src="img/magazinelandscape.webp"
+                  alt="magazine landscape"
+                />
+                <div
+                  class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center w-full z-10"
+                >
+                  <h4 class="lg:text-2xl text-white font-semibold md:text-5xl">
+                    Magazine Theme
+                  </h4>
+                  <span class="block text-gray-300 mb-5 uppercase text-xs md:text-xl md:mt-3 md:mb-16 mt-1 lg:mb-5 lg:text-xs"
+                    >ad sizes 300 x 350</span
+                  >
+                  <a
+                    href=""
+                    class="py-2 px-5 bg-red-600 text-white uppercase cursor-pointer rounded text-sm md:py-7 md:px-14 md:text-lg lg:py-2 lg:px-5 lg:text-sm"
+                  >
+                    Purchase Now
+                  </a>
+                </div>
+              </div>
+              <div class="mt-14">
+                <div class="head-container">
+                  <p>Newsletter</p>
+                </div>
+                <div class="my-5">
+                  <p class="text-gray-500">
+                    Subscribe our newsletter, get notification about new
+                    updates, information discount, etc
+                  </p>
+                </div>
+                <div>
+                  <form class="grid">
+                    <input
+                      class="placeholder:text-center bg-gray-300 py-3 placeholder:text-gray-500 outline-none px-3"
+                      type="email"
+                      placeholder="Enter your email"
+                    />
+                    <input
+                      class="py-3 cursor-pointer border border-red-600 mt-2 bg-red-600 text-white"
+                      type="submit"
+                      value="Subscribe"
+                    />
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="flex justify-center items-center bg-gray-950 lg:p-20 p-5 pt-16 mt-20 relative">
+      <div class="grid lg:grid-cols-4 gap-10 lg:mb-20 mb-48">
+        <div>
+          <img class="invert" src="img/logo.webp" alt="Logo" />
+          <p class="my-6 mt-7 text-gray-400">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+            sunt quia laboriosam at quasi nisi, rem quod aperiam rerum, eos,
+            possimus eaque tempore.
+          </p>
+          <div class="inline-flex space-x-2">
+            <div
+              class="w-10 h-10 bg-facebook rounded-full flex justify-center items-center"
+            >
+              <a class="text-white"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+            <div
+              class="w-10 h-10 bg-twitter rounded-full flex justify-center items-center"
+            >
+              <a class="text-white"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+            <div
+              class="w-10 h-10 bg-reddit rounded-full flex justify-center items-center"
+            >
+              <a class="text-white"
+                ><i class="fa-brands fa-reddit-alien"></i
+              ></a>
+            </div>
+            <div
+              class="w-10 h-10 bg-youtube rounded-full flex justify-center items-center"
+            >
+              <a class="text-white"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div
+            class="border-l-4 border-red-600 p-3 uppercase font-semibold bg-transparent text-white w-fit"
+          >
+            <p class="tracking-wider">categories</p>
+          </div>
+          <div class="grid grid-cols-2 mt-4">
+            <div class="inline-flex space-x-1 text-white items-center mb-5">
+              <svg
+                class="text-gray-500 w-4"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                class="w-4 h-4"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M12.78 7.595a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06l2.72-2.72-2.72-2.72a.75.75 0 0 1 1.06-1.06l3.25 3.25Zm-8.25-3.25 3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06l2.72-2.72-2.72-2.72a.75.75 0 0 1 1.06-1.06Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <a class="font-light" href="">Life Style</a>
+            </div>
+            <div class="inline-flex space-x-1 text-white items-center mb-5">
+              <svg
+                class="text-gray-500 w-4"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                class="w-4 h-4"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M12.78 7.595a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06l2.72-2.72-2.72-2.72a.75.75 0 0 1 1.06-1.06l3.25 3.25Zm-8.25-3.25 3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06l2.72-2.72-2.72-2.72a.75.75 0 0 1 1.06-1.06Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <a class="font-light" href="">Tech</a>
+            </div>
+            <div class="inline-flex space-x-1 text-white items-center mb-5">
+              <svg
+                class="text-gray-500 w-4"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                class="w-4 h-4"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M12.78 7.595a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06l2.72-2.72-2.72-2.72a.75.75 0 0 1 1.06-1.06l3.25 3.25Zm-8.25-3.25 3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06l2.72-2.72-2.72-2.72a.75.75 0 0 1 1.06-1.06Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <a class="font-light" href="">Travel</a>
+            </div>
+            <div class="inline-flex space-x-1 text-white items-center mb-5">
+              <svg
+                class="text-gray-500 w-4"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                class="w-4 h-4"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M12.78 7.595a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06l2.72-2.72-2.72-2.72a.75.75 0 0 1 1.06-1.06l3.25 3.25Zm-8.25-3.25 3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06l2.72-2.72-2.72-2.72a.75.75 0 0 1 1.06-1.06Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <a class="font-light" href="">Music</a>
+            </div>
+            <div class="inline-flex space-x-1 text-white items-center mb-5">
+              <svg
+                class="text-gray-500 w-4"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                class="w-4 h-4"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M12.78 7.595a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06l2.72-2.72-2.72-2.72a.75.75 0 0 1 1.06-1.06l3.25 3.25Zm-8.25-3.25 3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06l2.72-2.72-2.72-2.72a.75.75 0 0 1 1.06-1.06Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <a class="font-light" href="">Foods</a>
+            </div>
+            <div class="inline-flex space-x-1 text-white items-center mb-3">
+              <svg
+                class="text-gray-500 w-4"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                class="w-4 h-4"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M12.78 7.595a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06l2.72-2.72-2.72-2.72a.75.75 0 0 1 1.06-1.06l3.25 3.25Zm-8.25-3.25 3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06l2.72-2.72-2.72-2.72a.75.75 0 0 1 1.06-1.06Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <a class="font-light" href="">Fashion</a>
+            </div>
+            <div class="inline-flex space-x-1 text-white items-center mb-5">
+              <svg
+                class="text-gray-500 w-4"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                class="w-4 h-4"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M12.78 7.595a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06l2.72-2.72-2.72-2.72a.75.75 0 0 1 1.06-1.06l3.25 3.25Zm-8.25-3.25 3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06l2.72-2.72-2.72-2.72a.75.75 0 0 1 1.06-1.06Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <a class="font-light" href="">Game</a>
+            </div>
+            <div class="inline-flex space-x-1 text-white items-center mb-5">
+              <svg
+                class="text-gray-500 w-4"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                class="w-4 h-4"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M12.78 7.595a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06l2.72-2.72-2.72-2.72a.75.75 0 0 1 1.06-1.06l3.25 3.25Zm-8.25-3.25 3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06l2.72-2.72-2.72-2.72a.75.75 0 0 1 1.06-1.06Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <a class="font-light" href="">Football</a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div
+            class="border-l-4 border-red-600 p-3 uppercase font-semibold bg-transparent text-white w-fit mb-4"
+          >
+            <p class="tracking-wider">celebrity news</p>
+          </div class="mt-4">
+          <div class="text-gray-400" id="celebrityContainer">
+            <div
+              class="flex gap-3 mb-8 border-b border-gray-400 pb-2"
+              id="celebrityPost"
+            >
+              <div class="-mt-1" id="innerCelebrityPost">
+                <div
+                  class="mt-2 flex gap-3 flex-wrap text-gray-400"
+                  id="celebrityEngagement"
+                >
+                  <div class="flex space-x-1">
+                    <svg
+                      class="w-4"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                      />
+                    </svg>
+                    <span class="text-sm">35</span>
+                  </div>
+                  <div class="flex space-x-1">
+                    <svg
+                      class="w-4"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z"
+                      />
+                    </svg>
+                    <span class="text-sm">24</span>
+                  </div>
+                  <div class="flex space-x-1">
+                    <svg
+                      class="w-4"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"
+                      />
+                    </svg>
+                    <span class="text-sm">14</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex gap-3 mb-8" id="celebrityPost">
+              <div class="-mt-1" id="innerCelebrityPost">
+                <div
+                  class="mt-2 flex gap-3 flex-wrap text-gray-400"
+                  id="celebrityEngagement"
+                >
+                  <div class="flex space-x-1">
+                    <svg
+                      class="w-4"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                      />
+                    </svg>
+                    <span class="text-sm">35</span>
+                  </div>
+                  <div class="flex space-x-1">
+                    <svg
+                      class="w-4"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z"
+                      />
+                    </svg>
+                    <span class="text-sm">24</span>
+                  </div>
+                  <div class="flex space-x-1">
+                    <svg
+                      class="w-4"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"
+                      />
+                    </svg>
+                    <span class="text-sm">14</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div
+            class="border-l-4 border-red-600 p-3 uppercase font-semibold bg-transparent text-white w-fit"
+          >
+            <p class="tracking-wider">channels</p>
+          </div>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <div
+              class="text-gray-500 bg-gray-700 p-1 rounded text-center uppercase text-sm hover:bg-gray-800 hover:text-white transition duration-700 ease-in"
+            >
+              <a href="">Travel</a>
+            </div>
+            <div
+              class="text-gray-500 bg-gray-700 p-1 rounded text-center uppercase text-sm hover:bg-gray-800 hover:text-white transition duration-700 ease-in"
+            >
+              <a href="">Fashion</a>
+            </div>
+            <div
+              class="text-gray-500 bg-gray-700 p-1 rounded text-center uppercase text-sm hover:bg-gray-800 hover:text-white transition duration-700 ease-in"
+            >
+              <a href="">music</a>
+            </div>
+            <div
+              class="text-gray-500 bg-gray-700 p-1 rounded text-center uppercase text-sm hover:bg-gray-800 hover:text-white transition duration-700 ease-in"
+            >
+              <a href="">design</a>
+            </div>
+            <div
+              class="text-gray-500 bg-gray-700 p-1 rounded text-center uppercase text-sm hover:bg-gray-800 hover:text-white transition duration-700 ease-in"
+            >
+              <a href="">news</a>
+            </div>
+            <div
+              class="text-gray-500 bg-gray-700 p-1 rounded text-center uppercase text-sm hover:bg-gray-800 hover:text-white transition duration-700 ease-in"
+            >
+              <a href="">trending</a>
+            </div>
+            <div
+              class="text-gray-500 bg-gray-700 p-1 rounded text-center uppercase text-sm hover:bg-gray-800 hover:text-white transition duration-700 ease-in"
+            >
+              <a href="">video</a>
+            </div>
+            <div
+              class="text-gray-500 bg-gray-700 p-1 rounded text-center uppercase text-sm hover:bg-gray-800 hover:text-white transition duration-700 ease-in"
+            >
+              <a href="">game</a>
+            </div>
+            <div
+              class="text-gray-500 bg-gray-700 p-1 rounded text-center uppercase text-sm hover:bg-gray-800 hover:text-white transition duration-700 ease-in"
+            >
+              <a href="">sports</a>
+            </div>
+            <div
+              class="text-gray-500 bg-gray-700 p-1 rounded text-center uppercase text-sm hover:bg-gray-800 hover:text-white transition duration-700 ease-in"
+            >
+              <a href="">lifestyle</a>
+            </div>
+            <div
+              class="text-gray-500 bg-gray-700 p-1 rounded text-center uppercase text-sm hover:bg-gray-800 hover:text-white transition duration-700 ease-in"
+            >
+              <a href="">foods</a>
+            </div>
+            <div
+              class="text-gray-500 bg-gray-700 p-1 rounded text-center uppercase text-sm hover:bg-gray-800 hover:text-white transition duration-700 ease-in"
+            >
+              <a href="">tv shows</a>
+            </div>
+            <div
+              class="text-gray-500 bg-gray-700 p-1 rounded text-center uppercase text-sm hover:bg-gray-800 hover:text-white transition duration-700 ease-in"
+            >
+              <a href="">twitter video</a>
+            </div>
+            <div
+              class="text-gray-500 bg-gray-700 p-1 rounded text-center uppercase text-sm hover:bg-gray-800 hover:text-white transition duration-700 ease-in"
+            >
+              <a href="">playing</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="absolute bottom-0 lg:pt-3 pt-7 pb-7 px-5 lg:px-14 w-full bg-gray-900 flex lg:justify-between text-gray-400 flex-col lg:flex-row gap-3 text-center">
+        <div><p>Copyright &copy;2024. All rights reserved. This template is made with <span class="text-red-600">&hearts;</span></p></div>
+        <div class="lg:space-x-7 space-x-3 capitalize">
+          <a href="">Home</a>
+          <a href="">Privacy</a>
+          <a href="">Advertisment</a>
+          <a href="">contact us</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

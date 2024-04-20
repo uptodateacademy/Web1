@@ -1,0 +1,105 @@
+body {
+  position: relative;
+}
+
+#mostPopular img,
+#sportsNews img,
+#celebrityPost img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 0.25rem;
+  object-fit: cover;
+  object-position: center;
+}
+
+#mostPopularTitle a,
+#innerSportsNews a,
+#innerCelebrityPost a {
+  color: rgb(55 65 81 / 1);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  transition: all 111ms linear;
+}
+
+#mostPopularTitle a:hover,
+#innerSportsNews a:hover,
+#innerCelebrityPost a:hover {
+  color: rgb(220 38 38 / 1);
+}
+
+#footerPost img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 0.25rem;
+  object-fit: cover;
+  object-position: center;
+}
+
+#footerInnerPost a {
+  color: rgb(209, 212, 218);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  transition: all 111ms linear;
+}
+
+#footerInnerPost a:hover {
+  color: rgb(220 38 38 / 1);
+}
+
+#outerPostBody {
+  margin: 20px 0;
+}
+
+#outerPostBody #innerPostBody .each-post {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 40px;
+  overflow: hidden;
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color),
+    0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  padding: 15px;
+  border-radius: 0.25rem;
+}
+
+#outerPostBody #innerPostBody .each-post > div:first-child {
+  width: 350px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 0.25rem;
+}
+
+#outerPostBody #innerPostBody .each-post > div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  transition: all 111ms linear;
+}
+
+#outerPostBody #innerPostBody .each-post img:hover {
+  transform: scale(1.1);
+}
+
+#outerPostBody #innerPostBody .each-post a {
+  color: rgb(55 65 81 / 1);
+  display: block;
+  font-weight: 600;
+  font-size: 1.05rem;
+  line-height: 1.75rem;
+  margin-bottom: 7px;
+  transition: all 111ms linear;
+}
+
+#outerPostBody #innerPostBody .each-post a:hover {
+  color: rgb(220 38 38 / 1);
+}
+
+#outerPostBody #innerPostBody .each-post p {
+  font-size: 0.95rem;
+  color: rgb(55 65 81 / 9);
+}
