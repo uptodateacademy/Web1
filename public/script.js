@@ -68,6 +68,7 @@ async function getHomePost(count = 10) {
             //Gets the title
             title = document.createElement("a");
             title.textContent = articles[i].title;
+            title.setAttribute("target", "_blank");
             title.href = articles[i].url;
 
             //Gets the url to image
@@ -104,6 +105,7 @@ async function getMostPopularNews() {
             const title = document.createElement("a");
             const img = document.createElement("img");
             const url = document.createElement("a");
+            url.setAttribute("target", "_blank");
 
             let strTitle;
 
@@ -155,6 +157,7 @@ async function getSportsNews() {
             const title = document.createElement("a");
             const img = document.createElement("img");
             const url = document.createElement("a");
+            url.setAttribute("target", "_blank");
 
             let strTitle;
             if (articles[i].title.toString().length > 50) {
@@ -203,6 +206,7 @@ async function getCelebrityNews() {
             const title = document.createElement("a");
             const img = document.createElement("img");
             const url = document.createElement("a");
+            url.setAttribute("target", "_blank");
 
             let strTitle;
             if (articles[i].title.toString().length > 50) {
