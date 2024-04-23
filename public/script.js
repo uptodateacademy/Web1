@@ -23,6 +23,7 @@ window.addEventListener("load", (event) => {
     getCelebrityNews();
 });
 
+//I just made a change to this API KEY
 const apiKey = "a7fd589a7e0d44fda3b896c9789ec353";
 
 //This functions gets the default home articles
