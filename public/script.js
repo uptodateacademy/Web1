@@ -130,7 +130,7 @@ async function getMostPopularNews() {
             mostPopularTitle.insertBefore(title, mostPopularEngagement);
         };
     } catch (error) {
-        console.log("I did not fetch at all")
+        console.log("I did not fetch at all");
         if (error.message === "Failed to fetch") {
             const mostPopularContainer = document.getElementById("mostPopularContainer");
             mostPopularContainer.innerHTML = "No Internet Connection " + error;
